@@ -1,0 +1,33 @@
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-box {
+    height: 100%;
+}
+
+.content-box {
+    text-align: center;
+    min-width: 90vh;
+    border-radius: 2px;
+}
+
+.card {
+    min-height: 50vh;
+}
+
+.form {
+    width: 100%;
+}
+
+.full {
+    min-width: 90%;
+    margin: 3vh 0vh 3vh 0vh;
+}
+
+.font-title {
+    font-size: 3vh;
+    font-family: initial;
+}
