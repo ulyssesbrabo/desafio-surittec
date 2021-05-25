@@ -1,0 +1,65 @@
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-box {
+    height: 100%;
+}
+
+.content-box {
+    text-align: center;
+    min-width: 90vh;
+    border-radius: 2px;
+}
+
+.card {
+    min-height: 60vh;
+}
+
+.form {
+    width: 100%;
+}
+
+.full {
+    min-width: 100%;
+}
+
+.font-title {
+    font-size: 3vh;
+    font-family: initial;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.divider {
+    font-size: 5vh;
+    padding: 2vh;
+    color: rgba(223, 216, 216, 0.87);
+}
+
+.corpo {
+    display: flex;
+}
+
+.body-corpo {
+    min-width: 50%;
+}
+
+.new-full {
+    min-width: 85%;
+    margin: 0vh 1vh 0vh -3vh;
+}
+
+.body-form {
+    padding: 2vh;
+}
+
+.email-body {
+    min-width: 100%;
+}

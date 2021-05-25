@@ -52,6 +52,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterUserServiceService } from './register-user-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -108,9 +112,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    RegisterUserServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

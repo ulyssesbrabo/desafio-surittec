@@ -15,7 +15,7 @@
 }
 
 .card {
-    min-height: 50vh;
+    min-height: 60vh;
 }
 
 .form {
@@ -30,4 +30,16 @@
 .font-title {
     font-size: 3vh;
     font-family: initial;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.divider {
+    font-size: 5vh;
+    padding: 2vh;
+    color: rgba(223, 216, 216, 0.87);
 }

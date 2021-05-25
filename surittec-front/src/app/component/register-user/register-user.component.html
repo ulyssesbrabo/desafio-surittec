@@ -1,1 +1,77 @@
-<p>register-user works!</p>
+<div class="flex-box container-box">
+    <div class="content-box">
+        <mat-card class="card">
+          <form [formGroup]="empForm" class="body-form">
+              <mat-form-field  class="full">
+                  <mat-label>Name</mat-label>
+                  <input matInput type="text" formControlName="userName">
+              </mat-form-field>
+              <mat-form-field  class="full">
+                  <mat-label>CPF</mat-label>
+                  <input matInput type="text" formControlName="userCPF" mask="000.000.000-00">
+              </mat-form-field>
+              <div class="endereco">
+                  <mat-form-field  class="full">
+                      <mat-label>CEP</mat-label>
+                      <input matInput type="text" formControlName="userCEP" (change)="onSearch($event)" mask="00.000-000">
+                  </mat-form-field>
+                  <div class="corpo">
+                    <div class="body-corpo">
+                        <mat-form-field class="full">
+                            <mat-label>Logradouro</mat-label>
+                            <input matInput type="text" formControlName="userLOG">
+                        </mat-form-field>
+                    </div>
+                    <div class="body-corpo">
+                        <mat-form-field class="full">
+                            <mat-label>Bairro</mat-label>
+                            <input matInput type="text" formControlName="nameBAR">
+                        </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="corpo">
+                      <div class="body-corpo">
+                          <mat-form-field class="full">
+                              <mat-label>Cidade</mat-label>
+                              <input matInput type="text" formControlName="userCID">
+                          </mat-form-field>
+                      </div>
+                      <div class="body-corpo">
+                          <mat-form-field class="full">
+                              <mat-label>UF</mat-label>
+                              <input matInput type="text" formControlName="nameUF">
+                          </mat-form-field>
+                      </div>
+                    </div>
+              </div>
+            <div formArrayName="emailsUser">
+              <div *ngFor="let employee of emailsUser().controls; let empIndex=index">
+                <div [formGroupName]="empIndex" class="email-body">
+                  <mat-form-field class="new-full">
+                      <mat-label>E-mail</mat-label>
+                      <input matInput type="text" formControlName="emails">
+                  </mat-form-field>
+                  <button mat-mini-fab color="warn" (click)="removeEmployee(empIndex)">X</button>
+                  <button mat-mini-fab color="primary" (click)="addEmployee()">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div formArrayName="phoneUser">
+                <div *ngFor="let employee of phoneUser().controls; let empIndex=index">
+                    <div [formGroupName]="empIndex" class="email-body">
+                    <mat-form-field>
+                        <mat-label>Telefone</mat-label>                          
+                        <input matInput type="text" formControlName="phone" mask="(00) 0 0000-0000 || (00) 0000-0000">
+                    </mat-form-field>
+                    <button mat-mini-fab color="warn" (click)="removeEmployeePhone(empIndex)">X</button>
+                    <button mat-mini-fab color="primary" (click)="addEmployeePhone()">+</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" (click)="enviarDados()">Salvar</button>
+          </form>
+        </mat-card>
+    </div>
+</div> 
+ 
